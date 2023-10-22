@@ -1,0 +1,129 @@
+$color_1: #05253C;
+$color_2: #040404;
+$color_3: #DBDBDB;
+$color_4: #ff0000;
+$font-family_1: 'Plus Jakarta Sans', sans-serif;
+$background-color_1: transparent;
+
+body {
+	height: auto;
+	background: white;
+}
+.artboard {
+	display: grid;
+	grid-gap: 0px;
+	grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+}
+.left-side {
+	top: 0px;
+	left: 0px;
+	height: auto;
+	background: #FFFFFF 0% 0% no-repeat padding-box;
+	opacity: 1;
+}
+.logo {
+	padding-top: 66px;
+	padding-left: 180px;
+	width: 76px;
+	height: 76px;
+	background: transparent url('img/Logo.png') 0% 0% no-repeat padding-box;
+	opacity: 1;
+}
+h1 {
+	top: 188px;
+	padding-left: 180px;
+	width: 471px;
+	height: 55px;
+	text-align: left;
+	font: normal normal 200 40px/52px Manrope;
+	letter-spacing: 0px;
+	color: $color_1;
+	padding-top: 12px;
+	opacity: 1;
+}
+.image-container {
+	margin-top: -3%;
+	padding-left: 173px;
+	width: 583px;
+	height: 768px;
+	background: transparent url('img/jordan-steranka-lpddCskeg4A-unsplash.png') 0% 0% no-repeat padding-box;
+	opacity: 1;
+}
+form {
+	border: none;
+	padding-left: 180px;
+	background: transparent;
+}
+label {
+	top: 273px;
+	padding-top: 30px;
+	padding-bottom: 50px;
+	width: 89px;
+	height: 21px;
+	text-align: left;
+	font-family: $font-family_1;
+	font: normal normal medium 16px/28px;
+	letter-spacing: 0px;
+	color: $color_1;
+	opacity: 1;
+}
+input {
+	position: relative;
+	padding-top: 15px;
+	width: 444px;
+	height: 40px;
+	margin-bottom: 30px;
+	background-color: $background-color_1;
+	border: none;
+	border-bottom: 1px solid #EBEBEB;
+	outline: none;
+	color: $color_2;
+	font-weight: 400;
+	opacity: 1;
+}
+.input-field {
+	&::-webkit-input-placeholder {
+		top: 573px;
+		left: 180px;
+		width: 444px;
+		height: 15px;
+		padding-bottom: 5px;
+		text-align: left;
+		font-family: $font-family_1;
+		font: normal normal medium 12px/24px;
+		letter-spacing: 0px;
+		color: $color_3;
+		opacity: 1;
+	}
+}
+button {
+	margin-top: 20px;
+	top: 643px;
+	left: 180px;
+	width: 168px;
+	height: 45px;
+	padding-top: 5px;
+	background: #FFDC47;
+	outline: none;
+	border: none;
+	cursor: pointer;
+	opacity: 1;
+	text-align: center;
+	font: normal normal 600 16px/32px Plus Jakarta Sans;
+	letter-spacing: 0px;
+	color: $color_1;
+	opacity: 1;
+}
+#email-error {
+	position: absolute;
+	top: 520px;
+	left: 500px;
+	width: 125px;
+	height: 15px;
+	text-align: left;
+	font-family: $font-family_1;
+	font-size: 12px;
+	letter-spacing: 0px;
+	color: $color_4;
+	opacity: 1;
+}

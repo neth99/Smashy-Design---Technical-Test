@@ -1,0 +1,91 @@
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title> Smashy Designs </title>
+
+        <!-- Linking Fonts -->
+        <link rel="stylesheet" type="text/css" href="Tech Test Style.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200&display=swap" rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200&family=Plus+Jakarta+Sans:wght@500&display=swap" rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200&family=Plus+Jakarta+Sans:wght@500;600&display=swap" rel="stylesheet">
+
+    </head>
+
+    <body>
+        <div class="artboard">
+             <!-- Left side of the page: logo and the form -->
+             <div class="left-side">
+
+                <!-- Top Logo (Image) -->
+                <div class="logo">
+                    <img src="Logo.png" alt="Image 1.0">
+                </div>
+                
+                <!--Heading of the form-->
+                <div class="form-container">
+                <h1>We'd love to hear from you.</h1>
+                <form>
+    
+                    <!--Input fields of the form-->
+                    <label for="fname">First Name*</label> <br>
+                    <input type="text" class="input-field" placeholder="Please type your first name" id="fname" required><br>
+    
+                    <!--Input field: Last Name-->
+                    <label for="lname">Last Name*</label> <br>
+                    <input type="text" class="input-field" placeholder="Please type your last name" id="lname" required><br>
+    
+                    <!--Input field: Email Address-->
+                    <div class="input-group">
+                        <label for="email"> Email Address* </label><br>
+                        <input type="text" class="input-field" id="emailcheck" placeholder="Please type your email address" onkeyup="checkemail()" required >
+                        <span id = "email-error"></span>
+                    </div>
+                    
+                    <!--Input field: Address-->
+                    <label for="address">Address*</label> <br>
+                    <input type="text" class="input-field" placeholder="Please type your address" id="address" required><br>
+                    
+                    <button type="submit" class="submit-btn">Submit</button>
+                </form>
+                </div>
+             </div>
+
+            <!-- Right side (Image) -->
+            <div class="image-container">
+                <img src="jordan-steranka-lpddCskeg4A-unsplash.png" alt="Image 2.0">
+            </div>
+        </div>
+        
+        <!--Validation for email-->
+
+    <script>
+        function checkemail() {
+            var emailError = document.getElementById('email-error');
+            var emailInput = document.getElementById('emailcheck'); 
+            var email = emailInput.value;
+          
+            if (email.length == 0) {
+              emailError.innerHTML = 'Email is required';
+              emailInput.style.setProperty('color', '#FF0000', 'important'); // Change the text color to red
+              return false;
+            }
+          
+            if (!email.match(/^[A-Za-z\._\-[0-9]*[@][A-Za-z]*[\.][a-z]{2,4}\s*$/)) {
+              emailError.innerHTML = 'Invalid Email Address';
+              emailInput.style.setProperty('color', '#FF0000', 'important'); // Change the text color to red
+              return false;
+            }
+          
+            emailError.innerHTML = '';
+            emailInput.style.setProperty('color', '#000000', 'important'); // Reset the text color to black
+            return true;
+          }
+          </script>
+    </body>
+</html> 
